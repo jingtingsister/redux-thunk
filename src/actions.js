@@ -42,7 +42,7 @@ function mythunk() {
     await dispatch(letsload());
     try {
       const response = await fetch(
-        'http://www.mocky.io/v2/595346bc270000c300b2a9f0',
+        'https://www.mocky.io/v2/595346bc270000c300b2a9f0',
         {
           method: 'get',
           cors: true,
