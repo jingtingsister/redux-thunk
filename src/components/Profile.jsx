@@ -4,8 +4,12 @@ import PropTypes from 'prop-types';
 class Profile extends Component {
   static propTypes = {
     getdata: PropTypes.func.isRequired,
+    content: PropTypes.shape({
+      movies: PropTypes.array.isRequired,
+    }).isRequired,
   }
 
+  // app 會把 content 傳進來，所以寫 defaultProps 沒用，沒辦法改善 map of undefined 的 error
   // static defaultProps = {
   //   content: {
   //     movies: [],
@@ -33,6 +37,10 @@ class Profile extends Component {
   //   });
   // }
 
+  handleClick = () => {
+    this.props.getdata();
+  };
+
   renderLoading() {
     return (
       <p>Loading...</p>
@@ -40,7 +48,7 @@ class Profile extends Component {
   }
 
   renderMovieList() {
-    if (this.props.content.movies) {
+    if (this.props.content.movies) { // this.props.content.movies是父組件App傳進來的
       const listItems = this.props.content.movies.map(movie => (
         <li key={movie.id}>
           {movie}
@@ -51,10 +59,6 @@ class Profile extends Component {
       );
     }
   }
-
-  handleClick = () => {
-    this.props.getdata();
-  };
 
   render() {
     // console.log('state: ', this.state.content);

@@ -32,7 +32,7 @@ function letsload() {
 function loadingcomplete(data) { // 從await dispatch(loadingcomplete(json))的json拿到的
   return {
     type: LOADING_COMPLETE,
-    content: data,
+    content: data, // state裡面的這個data要交給mapStateToProps
 
   };
 }
