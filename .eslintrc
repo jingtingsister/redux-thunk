@@ -1,0 +1,34 @@
+{
+  "parser": "babel-eslint",
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs"
+  },
+  "extends": "airbnb",
+  "plugins": [
+    "import",
+    "react"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "rules": {
+    "no-console": 0,
+    "react/prefer-stateless-function": [ 0, {
+      "ignorePureComponents": true
+    }],
+    "object-shorthand": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack" : {
+        "config": "webpack.config.js"
+      }
+    }
+  },
+  "ecmaFeatures": {
+    "arrowFunctions": true,
+    "jsx": true
+  }
+}
