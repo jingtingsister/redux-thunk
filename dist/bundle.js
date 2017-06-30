@@ -33706,7 +33706,7 @@ function mythunk() {
             case 2:
               _context.prev = 2;
               _context.next = 5;
-              return fetch('http://www.mocky.io/v2/595346bc270000c300b2a9f0', {
+              return fetch('https://www.mocky.io/v2/595346bc270000c300b2a9f0', {
                 method: 'get',
                 cors: true
               });
