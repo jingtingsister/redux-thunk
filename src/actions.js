@@ -42,7 +42,7 @@ function mythunk() {
     await dispatch(letsload());
     try {
       const response = await fetch(
-        'http://www.mocky.io/v2/5959fcf50f000088009fe281',
+        'https://www.mocky.io/v2/5959fcf50f000088009fe281', // gh-pages demo, http要加上s
         {
           method: 'get',
           cors: true,
