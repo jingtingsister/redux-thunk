@@ -30,7 +30,7 @@ function myApp(state = initialState, action) {
         ...state,
         ready: true,
         loading: false,
-        content: action.content, // 從action傳進來的json
+        content: action.content, // 從action傳進來的json = data -> Newstate
       };
     default:
       return state;

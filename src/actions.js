@@ -38,11 +38,11 @@ function loadingcomplete(data) { // 從await dispatch(loadingcomplete(json))的j
 }
 
 function mythunk() {
-  return (async function (dispatch) {
+  return (async function (dispatch) { // thunk把dispatch方法傳進來，讓dispatch可以等下再用
     await dispatch(letsload());
     try {
       const response = await fetch(
-        'https://www.mocky.io/v2/595346bc270000c300b2a9f0',
+        'http://www.mocky.io/v2/5959fcf50f000088009fe281',
         {
           method: 'get',
           cors: true,
